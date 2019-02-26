@@ -1,0 +1,51 @@
+<button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    {{manageRuleForm.value | json }}
+    <form [formGroup]="manageRuleForm" novalidate (ngSubmit)="save(manageRuleForm.value)">
+      <div formArrayName="rules">
+        <div *ngFor="let ctrl of manageRuleForm.controls.rules.controls; let i=index" class="panel panel-default">
+          <div class="panel-body" [formGroupName]="i">
+            <app-autocomplete-control [group]="ctrl" [demographicDropdown]="labelList" (selected)="selectedValueData($event)"></app-autocomplete-control>
+            <div>
+              <dropdown-control [group]="ctrl" [operatorList]="operatorValue" (operatorSelected)="selectedOperatorData($event)"></dropdown-control>
+            </div>
+
+            <div *ngIf="operatorSelectedValue &&  currentValue['Type'] == 'date'">
+              <date-control></date-control>
+            </div>
+            <div *ngIf="operatorSelectedValue &&  currentValue['Type'] == 'string'">
+              <input type="text" formControlName="Value">
+            </div>
+            <div *ngIf="operatorSelectedValue &&  currentValue['Type'] == 'list'">
+              <dropdown-control (operatorSelected)="selectedOperatorData($event)"></dropdown-control>
+            </div>
+          </div>
+        </div>
+
+        <button (click)="addNewRow()">One More</button>
+
+      </div>
+      <div formArrayName="condition">
+        <div *ngFor="let ctrl of manageRuleForm.controls.condition.controls; let i=index" class="panel panel-default">
+          <div class="panel-body" [formGroupName]="i">
+            <input type="checkbox" formControlName="Condition" />
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+
+  </div>
+</ng-template>
+
+<date-control></date-control>
+

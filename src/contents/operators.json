@@ -1,0 +1,30 @@
+{
+  "string": [{
+      "Name": "GT",
+      "DisplayName": ">"
+
+    },
+    {
+      "Name": "LE",
+      "DisplayName": "<="
+
+    }
+  ],
+  "date": [{
+    "Name": "GT",
+    "DisplayName": ">"
+
+  }, {
+    "Name": "LE",
+    "DisplayName": "<="
+  }],
+  "list": [{
+      "Name": "INC",
+      "Display": "Include"
+    },
+    {
+      "Name": "INC",
+      "Display": "Include"
+    }
+  ]
+}

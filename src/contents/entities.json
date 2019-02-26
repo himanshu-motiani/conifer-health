@@ -1,0 +1,87 @@
+{
+  "Demographic": [{
+      "Name": "PatientID",
+      "DisplayName": "Patient ID",
+      "Type": "string",
+      "Selected": true
+    },
+    {
+      "Name": "FirstName",
+      "DisplayName": "First Name",
+      "Type": "string",
+      "Selected": false
+    },
+    {
+      "Name": "LastName",
+      "DisplayName": "Last Name",
+      "Type": "string",
+      "Selected": false
+
+    },
+    {
+      "Name": "DOB",
+      "DisplayName": "DOB",
+      "Type": "date",
+      "Selected": false
+    },
+    {
+      "Name": "City",
+      "DisplayName": "City",
+      "Type": "string",
+      "Selected": false
+    },
+    {
+      "Name": "State",
+      "DisplayName": "State",
+      "Type": "string",
+      "Selected": false
+    },
+    {
+      "Name": "Gender",
+      "DisplayName": "Gender",
+      "Type": "enum",
+      "Values": ["Male", "Female", "Other"],
+      "Selected": false
+    },
+    {
+      "Name": "SSN",
+      "DisplayName": "SSN",
+      "Type": "string",
+      "Selected": false
+    }
+  ],
+
+  "Encounter details": [{
+      "Name": "AdmissionDate",
+      "DisplayName": "Admission Date",
+      "Type": "date"
+    },
+    {
+      "Name": "DischargeDate",
+      "DisplayName": "Discharge Date",
+      "Type": "date"
+    },
+    {
+      "Name": "ReadmissionDate",
+      "DisplayName": "Readmission Date",
+      "Type": "date"
+    },
+    {
+      "Name": "ICDCodes",
+      "DisplayName": "ICD Codes",
+      "Type": "string"
+    },
+    {
+      "Name": "CPTCodes",
+      "DisplayName": "CPT Codes",
+      "Type": "list"
+    }
+
+  ],
+  "Claims information": [],
+  "Medical record": [],
+  "Patient education": [],
+  "Risk assessment": [],
+  "Insurance details": [],
+  "Billing information": []
+}

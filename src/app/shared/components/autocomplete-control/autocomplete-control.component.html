@@ -1,0 +1,7 @@
+<div [formGroup]="group">
+  <div *ngIf="demographicDropdown">
+    <input formControlName="label" [(ngModel)]="selectedAsset" [typeahead]="demographicDropdown" typeaheadOptionField="DisplayName"
+      [typeaheadOptionsLimit]="7" [typeaheadMinLength]="0" placeholder="Typeahead inside a form" class="form-control" (typeaheadOnSelect)="typeaheadOnSelect($event)">
+  </div>
+</div>
+<!-- [(ngModel)]="selectedAsset" -->

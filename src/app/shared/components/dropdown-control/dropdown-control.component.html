@@ -1,0 +1,5 @@
+<div [formGroup]="group" class="btn-group">
+  <ng-multiselect-dropdown formControlName="Operator" [placeholder]="'Choose operator'" [data]="value" [(ngModel)]="selectedItems"
+    [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" class="form-control" (onSelectAll)="onSelectAll($event)">
+  </ng-multiselect-dropdown>
+</div>
